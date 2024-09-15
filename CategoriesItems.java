@@ -14,9 +14,14 @@ public class CategoriesItems {
             rs=stmt.executeQuery(query);
             System.out.println("Category        Total number of Product");
             System.out.println("------------------------------------------");
+            boolean found=false;
             while (rs.next())
             {
+                found=true;
                 System.out.println(rs.getString(1)+"\t\t\t"+rs.getInt(2));
+            }
+            if(!found){
+                System.out.println("no record found");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
