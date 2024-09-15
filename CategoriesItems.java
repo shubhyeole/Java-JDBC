@@ -21,6 +21,7 @@ public class CategoriesItems {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }finally {
+            //closing the costly resources
             if(con!=null)
             {
                 try {
